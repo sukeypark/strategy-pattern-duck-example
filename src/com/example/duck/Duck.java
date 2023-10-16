@@ -12,6 +12,10 @@ public abstract class Duck {
         System.out.println("swim");
     }
 
+    public void fly() {
+        System.out.println("fly");
+    }
+
     public void display() {
         System.out.println(String.format("displaying %s", toDisplay));
     }
