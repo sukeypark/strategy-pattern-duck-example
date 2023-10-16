@@ -1,6 +1,9 @@
 package com.example.duck;
 
-public class RobotDuck extends Duck {
+import com.example.behavior.Flyable;
+import com.example.behavior.Quackable;
+
+public class RobotDuck extends Duck implements Quackable, Flyable {
 
     public RobotDuck() {
         this.toDisplay = "Robot duck";
