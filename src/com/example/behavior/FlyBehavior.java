@@ -1,6 +1,6 @@
 package com.example.behavior;
 
-public interface Flyable {
+public interface FlyBehavior {
 
     public void fly();
 

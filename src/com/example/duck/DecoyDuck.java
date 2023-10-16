@@ -1,22 +1,14 @@
 package com.example.duck;
 
-import com.example.behavior.Flyable;
-import com.example.behavior.Quackable;
+import com.example.behavior.FlyNoWay;
+import com.example.behavior.MuteQuack;
 
-public class DecoyDuck extends Duck implements Quackable, Flyable {
+public class DecoyDuck extends Duck {
 
     public DecoyDuck() {
         this.toDisplay = "Decoy duck";
-    }
-
-    @Override
-    public void quack() {
-        System.out.println("I can't quack.");
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("I can't fly.");
+        this.flyBehaior = new FlyNoWay();
+        this.quackBehavior = new MuteQuack();
     }
 
 }

@@ -1,22 +1,15 @@
 package com.example.duck;
 
-import com.example.behavior.Flyable;
-import com.example.behavior.Quackable;
+import com.example.behavior.FlyWithWings;
+import com.example.behavior.Quack;
+import com.example.behavior.QuackBehavior;
 
-public class RedheadDuck extends Duck implements Quackable, Flyable {
+public class RedheadDuck extends Duck {
 
     public RedheadDuck() {
         this.toDisplay = "Redhead Duck";
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("fly");
-    }
-
-    @Override
-    public void quack() {
-        System.out.println("quack");
+        this.quackBehavior = new Quack();
+        this.flyBehaior = new FlyWithWings();
     }
 
 }
